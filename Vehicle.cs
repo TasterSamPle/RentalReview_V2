@@ -8,5 +8,7 @@ namespace RentalReview_V2
 {
     internal class Vehicle
     {
+
+
     }
 }

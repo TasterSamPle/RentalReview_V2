@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace RentalReview_V2
 {
-    internal class Car
+    internal class Car : Vehicle
     {
+
+        public Car() 
+        {
+
+        }
+
     }
 }
