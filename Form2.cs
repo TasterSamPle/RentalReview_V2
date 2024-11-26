@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RentalReview_V2
 {
-    public partial class Car_Screen : Form
+    public partial class Car : Form
     {
-        public Car_Screen()
+        public Car()
         {
             InitializeComponent();
         }
@@ -20,6 +20,19 @@ namespace RentalReview_V2
         private void Car_Screen_Load(object sender, EventArgs e)
         {
 
+        }
+
+       
+
+
+        private void Reg_Add_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Check_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

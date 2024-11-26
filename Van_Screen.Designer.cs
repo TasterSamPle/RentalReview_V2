@@ -120,6 +120,8 @@
             Reg_Add.Name = "Reg_Add";
             Reg_Add.Size = new Size(100, 23);
             Reg_Add.TabIndex = 5;
+            Reg_Add.Click += Void;
+            Reg_Add.TextChanged += Reg_Add_TextChanged;
             // 
             // Add
             // 
@@ -129,7 +131,7 @@
             Add.TabIndex = 9;
             Add.Text = "Add to database";
             Add.UseVisualStyleBackColor = true;
-            Add.Click += button1_Click;
+            Add.Click += Add_Click;
             // 
             // Select_Add
             // 
@@ -150,7 +152,6 @@
             Check.Size = new Size(121, 23);
             Check.TabIndex = 11;
             Check.Text = "Check details";
-            Check.SelectedIndexChanged += Check_SelectedIndexChanged;
             // 
             // Output
             // 
@@ -187,7 +188,7 @@
             button1.TabIndex = 22;
             button1.Text = "Add to database";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            button1.Click += Edit_Add_Click;
             // 
             // Whe_Edit
             // 
@@ -261,6 +262,7 @@
             Remove.TabIndex = 24;
             Remove.Text = "Remove Selected";
             Remove.UseVisualStyleBackColor = true;
+            Remove.Click += Remove_Click;
             // 
             // Van_Screen
             // 

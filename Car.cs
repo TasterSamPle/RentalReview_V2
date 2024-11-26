@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace RentalReview_V2
 {
-    public class Car : Vehicle
+    public class CarForm : Vehicle
     {
         public int NumberOfPassengers { get; set; }
 
         
-        public Car(int wheels, double weight, string registration, int numberOfPassengers)
+        public CarForm(int wheels, double weight, string registration, int numberOfPassengers)
             : base(wheels, weight, registration)  
         {
             NumberOfPassengers = numberOfPassengers;

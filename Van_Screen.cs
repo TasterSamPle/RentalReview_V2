@@ -32,17 +32,32 @@ namespace RentalReview_V2
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Check_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void Add_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Edit_Add_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Remove_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Void(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Reg_Add_TextChanged(object sender, EventArgs e)
         {
 
         }

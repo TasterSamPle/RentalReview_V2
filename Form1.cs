@@ -23,7 +23,7 @@ namespace RentalReview_V2
         {
 
         }
-        Car_Screen secondForm = new Car_Screen();
+        Car secondForm = new Car();
         private void Car_Button_Click(object sender, EventArgs e)
         {
             secondForm.Show();

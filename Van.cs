@@ -10,7 +10,7 @@ namespace RentalReview_V2
     {
         public double Height { get; set; }
 
-        
+       
         public Van(int wheels, double weight, string registration, double height)
             : base(wheels, weight, registration)  
         {
