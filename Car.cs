@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace RentalReview_V2
 {
-    internal class Car : Vehicle
+    public class Car : Vehicle
     {
+        public int NumberOfPassengers { get; set; }
 
-        public Car() 
+        
+        public Car(int wheels, double weight, string registration, int numberOfPassengers)
+            : base(wheels, weight, registration)  
         {
-
+            NumberOfPassengers = numberOfPassengers;
         }
-
     }
 }

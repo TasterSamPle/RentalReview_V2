@@ -6,9 +6,17 @@ using System.Threading.Tasks;
 
 namespace RentalReview_V2
 {
-    internal class Vehicle
+    public class Vehicle
     {
+        public int Wheels { get; set; }
+        public double Weight { get; set; }
+        public string Registration { get; set; }
 
-
+        public Vehicle(int wheels, double weight, string registration)
+        {
+            Wheels = wheels;
+            Weight = weight;
+            Registration = registration;
+        }
     }
 }
