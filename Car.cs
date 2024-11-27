@@ -8,13 +8,7 @@ namespace RentalReview_V2
 {
     public class CarForm : Vehicle
     {
-        public int NumberOfPassengers { get; set; }
+        public int NumberOfPassengers;
 
-        
-        public CarForm(int wheels, double weight, string registration, int numberOfPassengers)
-            : base(wheels, weight, registration)  
-        {
-            NumberOfPassengers = numberOfPassengers;
-        }
     }
 }

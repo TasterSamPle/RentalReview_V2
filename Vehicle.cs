@@ -8,15 +8,10 @@ namespace RentalReview_V2
 {
     public class Vehicle
     {
-        public int Wheels { get; set; }
-        public double Weight { get; set; }
-        public string Registration { get; set; }
+        public int Wheels;
+        public double Weight;
+        public string Registration;
 
-        public Vehicle(int wheels, double weight, string registration)
-        {
-            Wheels = wheels;
-            Weight = weight;
-            Registration = registration;
-        }
+        
     }
 }

@@ -28,41 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Remove = new Button();
             Select_Edit = new ComboBox();
             Add_Edit = new Button();
             Whe_Edit = new TextBox();
             Wei_Edit = new TextBox();
-            Hei_Edit = new TextBox();
+            Pas_Edit = new TextBox();
             Reg_Edit = new TextBox();
             textBox9 = new TextBox();
             textBox10 = new TextBox();
             textBox11 = new TextBox();
             textBox12 = new TextBox();
             Check_Button = new Button();
-            Output = new PictureBox();
             Check = new ComboBox();
-            Select_Add = new ComboBox();
             Add = new Button();
             Whe_Add = new TextBox();
             Wei_Add = new TextBox();
-            Hei_Add = new TextBox();
+            Pas_Add = new TextBox();
             Reg_Add = new TextBox();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)Output).BeginInit();
+            Output = new TextBox();
+            Show = new Button();
+            textBox5 = new TextBox();
+            Remove = new Button();
             SuspendLayout();
-            // 
-            // Remove
-            // 
-            Remove.Location = new Point(581, 309);
-            Remove.Name = "Remove";
-            Remove.Size = new Size(90, 42);
-            Remove.TabIndex = 48;
-            Remove.Text = "Remove Selected";
-            Remove.UseVisualStyleBackColor = true;
             // 
             // Select_Edit
             // 
@@ -80,7 +71,7 @@
             Add_Edit.Name = "Add_Edit";
             Add_Edit.Size = new Size(90, 42);
             Add_Edit.TabIndex = 46;
-            Add_Edit.Text = "Add to database";
+            Add_Edit.Text = "Edit in database";
             Add_Edit.UseVisualStyleBackColor = true;
             // 
             // Whe_Edit
@@ -97,12 +88,12 @@
             Wei_Edit.Size = new Size(100, 23);
             Wei_Edit.TabIndex = 44;
             // 
-            // Hei_Edit
+            // Pas_Edit
             // 
-            Hei_Edit.Location = new Point(530, 260);
-            Hei_Edit.Name = "Hei_Edit";
-            Hei_Edit.Size = new Size(100, 23);
-            Hei_Edit.TabIndex = 43;
+            Pas_Edit.Location = new Point(530, 260);
+            Pas_Edit.Name = "Pas_Edit";
+            Pas_Edit.Size = new Size(100, 23);
+            Pas_Edit.TabIndex = 43;
             // 
             // Reg_Edit
             // 
@@ -134,9 +125,9 @@
             textBox11.Enabled = false;
             textBox11.Location = new Point(462, 233);
             textBox11.Name = "textBox11";
-            textBox11.Size = new Size(73, 23);
+            textBox11.Size = new Size(133, 23);
             textBox11.TabIndex = 39;
-            textBox11.Text = "Height";
+            textBox11.Text = "Number of Passangers";
             // 
             // textBox12
             // 
@@ -155,14 +146,7 @@
             Check_Button.TabIndex = 37;
             Check_Button.Text = "Check details";
             Check_Button.UseVisualStyleBackColor = true;
-            // 
-            // Output
-            // 
-            Output.Location = new Point(48, 240);
-            Output.Name = "Output";
-            Output.Size = new Size(145, 111);
-            Output.TabIndex = 36;
-            Output.TabStop = false;
+            Check_Button.Click += Check_Button_Click;
             // 
             // Check
             // 
@@ -173,17 +157,6 @@
             Check.Size = new Size(121, 23);
             Check.TabIndex = 35;
             Check.Text = "Check details";
-            Check.SelectedIndexChanged += Check_SelectedIndexChanged;
-            // 
-            // Select_Add
-            // 
-            Select_Add.FormattingEnabled = true;
-            Select_Add.Items.AddRange(new object[] { "CarA", "CarB", "CarC" });
-            Select_Add.Location = new Point(269, 46);
-            Select_Add.Name = "Select_Add";
-            Select_Add.Size = new Size(121, 23);
-            Select_Add.TabIndex = 34;
-            Select_Add.Text = "Add new Car";
             // 
             // Add
             // 
@@ -193,6 +166,7 @@
             Add.TabIndex = 33;
             Add.Text = "Add to database";
             Add.UseVisualStyleBackColor = true;
+            Add.Click += Add_Click;
             // 
             // Whe_Add
             // 
@@ -208,12 +182,12 @@
             Wei_Add.Size = new Size(100, 23);
             Wei_Add.TabIndex = 31;
             // 
-            // Hei_Add
+            // Pas_Add
             // 
-            Hei_Add.Location = new Point(290, 260);
-            Hei_Add.Name = "Hei_Add";
-            Hei_Add.Size = new Size(100, 23);
-            Hei_Add.TabIndex = 30;
+            Pas_Add.Location = new Point(290, 260);
+            Pas_Add.Name = "Pas_Add";
+            Pas_Add.Size = new Size(100, 23);
+            Pas_Add.TabIndex = 30;
             // 
             // Reg_Add
             // 
@@ -221,7 +195,6 @@
             Reg_Add.Name = "Reg_Add";
             Reg_Add.Size = new Size(100, 23);
             Reg_Add.TabIndex = 29;
-            Reg_Add.TextChanged += Reg_Add_TextChanged;
             // 
             // textBox4
             // 
@@ -246,9 +219,9 @@
             textBox2.Enabled = false;
             textBox2.Location = new Point(222, 233);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(73, 23);
+            textBox2.Size = new Size(132, 23);
             textBox2.TabIndex = 26;
-            textBox2.Text = "Height";
+            textBox2.Text = "Number of Passangers";
             // 
             // textBox1
             // 
@@ -259,68 +232,105 @@
             textBox1.TabIndex = 25;
             textBox1.Text = "Registration Number";
             // 
-            // Car_Screen
+            // Output
+            // 
+            Output.Location = new Point(23, 248);
+            Output.Multiline = true;
+            Output.Name = "Output";
+            Output.Size = new Size(184, 145);
+            Output.TabIndex = 49;
+            // 
+            // Show
+            // 
+            Show.Location = new Point(610, 74);
+            Show.Name = "Show";
+            Show.Size = new Size(78, 22);
+            Show.TabIndex = 50;
+            Show.Text = "Show";
+            Show.UseVisualStyleBackColor = true;
+            Show.Click += Show_Click;
+            // 
+            // textBox5
+            // 
+            textBox5.Enabled = false;
+            textBox5.Location = new Point(298, 46);
+            textBox5.Name = "textBox5";
+            textBox5.ReadOnly = true;
+            textBox5.Size = new Size(73, 23);
+            textBox5.TabIndex = 51;
+            textBox5.Text = "Add a Car";
+            // 
+            // Remove
+            // 
+            Remove.Location = new Point(580, 309);
+            Remove.Name = "Remove";
+            Remove.Size = new Size(90, 42);
+            Remove.TabIndex = 48;
+            Remove.Text = "Remove Selected";
+            Remove.UseVisualStyleBackColor = true;
+            Remove.Click += Remove_Click;
+            // 
+            // Car
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(711, 417);
+            Controls.Add(textBox5);
+            Controls.Add(Show);
+            Controls.Add(Output);
             Controls.Add(Remove);
             Controls.Add(Select_Edit);
             Controls.Add(Add_Edit);
             Controls.Add(Whe_Edit);
             Controls.Add(Wei_Edit);
-            Controls.Add(Hei_Edit);
+            Controls.Add(Pas_Edit);
             Controls.Add(Reg_Edit);
             Controls.Add(textBox9);
             Controls.Add(textBox10);
             Controls.Add(textBox11);
             Controls.Add(textBox12);
             Controls.Add(Check_Button);
-            Controls.Add(Output);
             Controls.Add(Check);
-            Controls.Add(Select_Add);
             Controls.Add(Add);
             Controls.Add(Whe_Add);
             Controls.Add(Wei_Add);
-            Controls.Add(Hei_Add);
+            Controls.Add(Pas_Add);
             Controls.Add(Reg_Add);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Name = "Car_Screen";
+            Name = "Car";
             Text = "Rental Reviewing system-Car";
-            Load += Car_Screen_Load;
-            ((System.ComponentModel.ISupportInitialize)Output).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button Remove;
         private ComboBox Select_Edit;
         private Button Add_Edit;
         private TextBox Whe_Edit;
         private TextBox Wei_Edit;
-        private TextBox Hei_Edit;
+        private TextBox Pas_Edit;
         private TextBox Reg_Edit;
         private TextBox textBox9;
         private TextBox textBox10;
         private TextBox textBox11;
         private TextBox textBox12;
         private Button Check_Button;
-        private PictureBox Output;
         private ComboBox Check;
-        private ComboBox Select_Add;
         private Button Add;
         private TextBox Whe_Add;
         private TextBox Wei_Add;
-        private TextBox Hei_Add;
+        private TextBox Pas_Add;
         private TextBox Reg_Add;
         private TextBox textBox4;
         private TextBox textBox3;
         private TextBox textBox2;
         private TextBox textBox1;
+        private TextBox Output;
+        private Button Show;
+        private TextBox textBox5;
+        private Button Remove;
     }
 }

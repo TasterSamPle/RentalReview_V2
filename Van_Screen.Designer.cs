@@ -39,7 +39,6 @@
             Add = new Button();
             Select_Add = new ComboBox();
             Check = new ComboBox();
-            Output = new PictureBox();
             Check_Button = new Button();
             Select_Edit = new ComboBox();
             button1 = new Button();
@@ -52,7 +51,7 @@
             textBox11 = new TextBox();
             textBox12 = new TextBox();
             Remove = new Button();
-            ((System.ComponentModel.ISupportInitialize)Output).BeginInit();
+            Output = new TextBox();
             SuspendLayout();
             // 
             // textBox1
@@ -72,7 +71,6 @@
             textBox2.Size = new Size(73, 23);
             textBox2.TabIndex = 1;
             textBox2.Text = "Height";
-            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // textBox3
             // 
@@ -82,7 +80,6 @@
             textBox3.Size = new Size(73, 23);
             textBox3.TabIndex = 2;
             textBox3.Text = "Weight (KG)";
-            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // textBox4
             // 
@@ -120,8 +117,6 @@
             Reg_Add.Name = "Reg_Add";
             Reg_Add.Size = new Size(100, 23);
             Reg_Add.TabIndex = 5;
-            Reg_Add.Click += Void;
-            Reg_Add.TextChanged += Reg_Add_TextChanged;
             // 
             // Add
             // 
@@ -153,14 +148,6 @@
             Check.TabIndex = 11;
             Check.Text = "Check details";
             // 
-            // Output
-            // 
-            Output.Location = new Point(25, 228);
-            Output.Name = "Output";
-            Output.Size = new Size(145, 111);
-            Output.TabIndex = 12;
-            Output.TabStop = false;
-            // 
             // Check_Button
             // 
             Check_Button.Location = new Point(37, 113);
@@ -188,7 +175,6 @@
             button1.TabIndex = 22;
             button1.Text = "Add to database";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += Edit_Add_Click;
             // 
             // Whe_Edit
             // 
@@ -264,11 +250,20 @@
             Remove.UseVisualStyleBackColor = true;
             Remove.Click += Remove_Click;
             // 
+            // Output
+            // 
+            Output.Location = new Point(25, 221);
+            Output.Multiline = true;
+            Output.Name = "Output";
+            Output.Size = new Size(142, 118);
+            Output.TabIndex = 25;
+            // 
             // Van_Screen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(769, 380);
+            Controls.Add(Output);
             Controls.Add(Remove);
             Controls.Add(Select_Edit);
             Controls.Add(button1);
@@ -281,7 +276,6 @@
             Controls.Add(textBox11);
             Controls.Add(textBox12);
             Controls.Add(Check_Button);
-            Controls.Add(Output);
             Controls.Add(Check);
             Controls.Add(Select_Add);
             Controls.Add(Add);
@@ -295,8 +289,6 @@
             Controls.Add(textBox1);
             Name = "Van_Screen";
             Text = "Rental Reviewing system-Van";
-            Load += Van_Screen_Load;
-            ((System.ComponentModel.ISupportInitialize)Output).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -314,7 +306,6 @@
         private Button Add;
         private ComboBox Select_Add;
         private ComboBox Check;
-        private PictureBox Output;
         private Button Check_Button;
         private ComboBox Select_Edit;
         private Button button1;
@@ -327,5 +318,6 @@
         private TextBox textBox11;
         private TextBox textBox12;
         private Button Remove;
+        private TextBox Output;
     }
 }
