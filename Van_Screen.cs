@@ -48,7 +48,7 @@ namespace RentalReview_V2
                     {
                         Van = ListOfVans.ElementAt(0);
                         Output.Text = "Registration number: " + Van.Registration + "\r\nWheels" + Van.Wheels +
-                            "\r\nWeight(KG)" + Van.Weight + "\r\nPassangers" + Van.Height;
+                            "\r\nWeight(KG)" + Van.Weight + "\r\nHeight" + Van.Height;
                         break;
                     }
 
@@ -62,7 +62,7 @@ namespace RentalReview_V2
                     {
                         Van = ListOfVans.ElementAt(1);
                         Output.Text = "Registration number: " + Van.Registration + "\r\nWheels" + Van.Wheels +
-                            "\r\nWeight(KG)" + Van.Weight + "\r\nPassangers" + Van.Height;
+                            "\r\nWeight(KG)" + Van.Weight + "\r\nHeight" + Van.Height;
                         break;
                     }
 
@@ -77,7 +77,7 @@ namespace RentalReview_V2
                     {
                         Van = ListOfVans.ElementAt(2);
                         Output.Text = "Registration number: " + Van.Registration + "\r\nWheels" + Van.Wheels +
-                            "\r\nWeight(KG)" + Van.Weight + "\r\nPassangers" + Van.Height;
+                            "\r\nWeight(KG)" + Van.Weight + "\r\nHeight" + Van.Height;
                         break;
                     }
             }
@@ -118,6 +118,54 @@ namespace RentalReview_V2
                     Van = ListOfVans.ElementAt(0);
                     ListOfVans.Remove(ListOfVans.ElementAt(0));
                     Output.Text = "Van removed from database";
+                    break;
+                case "VanB":
+                    Van = ListOfVans.ElementAt(1);
+                    ListOfVans.Remove(ListOfVans.ElementAt(1));
+                    Output.Text = "Van removed from database";
+                    break;
+                case "VanC":
+                    Van = ListOfVans.ElementAt(2);
+                    ListOfVans.Remove(ListOfVans.ElementAt(2));
+                    Output.Text = "Van removed from database";
+                    break;
+            }
+        }
+
+        private void Add_Edit_Click(object sender, EventArgs e)
+        {
+            Van Van = new Van();
+            switch (Select_Edit.SelectedItem)
+            {
+                case "VanA":
+                    Van = ListOfVans.ElementAt(0);
+                    ListOfVans.Remove(ListOfVans.ElementAt(0));
+                    ListOfVans.Add(Van);
+                    Van.Registration = Reg_Edit.Text;
+                    Van.Wheels = int.Parse(Whe_Edit.Text);
+                    Van.Weight = int.Parse(Wei_Edit.Text);
+                    Van.Height = int.Parse(Hei_Edit.Text);
+                    Output.Text = "Vehicle changed in database";
+                    break;
+                case "VanB":
+                    Van = ListOfVans.ElementAt(1);
+                    ListOfVans.Remove(ListOfVans.ElementAt(1));
+                    ListOfVans.Add(Van);
+                    Van.Registration = Reg_Edit.Text;
+                    Van.Wheels = int.Parse(Whe_Edit.Text);
+                    Van.Weight = int.Parse(Wei_Edit.Text);
+                    Van.Height = int.Parse(Hei_Edit.Text);
+                    Output.Text = "Vehicle changed in database";
+                    break;
+                case "VanC":
+                    Van = ListOfVans.ElementAt(2);
+                    ListOfVans.Remove(ListOfVans.ElementAt(2));
+                    ListOfVans.Add(Van);
+                    Van.Registration = Reg_Edit.Text;
+                    Van.Wheels = int.Parse(Whe_Edit.Text);
+                    Van.Weight = int.Parse(Wei_Edit.Text);
+                    Van.Height = int.Parse(Hei_Edit.Text);
+                    Output.Text = "Vehicle changed in database";
                     break;
             }
         }

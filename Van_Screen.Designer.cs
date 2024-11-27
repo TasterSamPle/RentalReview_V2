@@ -37,11 +37,10 @@
             Hei_Add = new TextBox();
             Reg_Add = new TextBox();
             Add = new Button();
-            Select_Add = new ComboBox();
             Check = new ComboBox();
             Check_Button = new Button();
             Select_Edit = new ComboBox();
-            button1 = new Button();
+            Add_Edit = new Button();
             Whe_Edit = new TextBox();
             Wei_Edit = new TextBox();
             Hei_Edit = new TextBox();
@@ -52,6 +51,8 @@
             textBox12 = new TextBox();
             Remove = new Button();
             Output = new TextBox();
+            Show = new Button();
+            textBox5 = new TextBox();
             SuspendLayout();
             // 
             // textBox1
@@ -128,16 +129,6 @@
             Add.UseVisualStyleBackColor = true;
             Add.Click += Add_Click;
             // 
-            // Select_Add
-            // 
-            Select_Add.FormattingEnabled = true;
-            Select_Add.Items.AddRange(new object[] { "VanA", "VanB", "VanC" });
-            Select_Add.Location = new Point(246, 34);
-            Select_Add.Name = "Select_Add";
-            Select_Add.Size = new Size(121, 23);
-            Select_Add.TabIndex = 10;
-            Select_Add.Text = "Add new Van";
-            // 
             // Check
             // 
             Check.FormattingEnabled = true;
@@ -156,6 +147,7 @@
             Check_Button.TabIndex = 13;
             Check_Button.Text = "Check details";
             Check_Button.UseVisualStyleBackColor = true;
+            Check_Button.Click += Check_Button_Click;
             // 
             // Select_Edit
             // 
@@ -167,14 +159,15 @@
             Select_Edit.TabIndex = 23;
             Select_Edit.Text = "Edit a Vans Details";
             // 
-            // button1
+            // Add_Edit
             // 
-            button1.Location = new Point(439, 297);
-            button1.Name = "button1";
-            button1.Size = new Size(90, 42);
-            button1.TabIndex = 22;
-            button1.Text = "Add to database";
-            button1.UseVisualStyleBackColor = true;
+            Add_Edit.Location = new Point(439, 297);
+            Add_Edit.Name = "Add_Edit";
+            Add_Edit.Size = new Size(90, 42);
+            Add_Edit.TabIndex = 22;
+            Add_Edit.Text = "Edit in database";
+            Add_Edit.UseVisualStyleBackColor = true;
+            Add_Edit.Click += Add_Edit_Click;
             // 
             // Whe_Edit
             // 
@@ -258,15 +251,36 @@
             Output.Size = new Size(142, 118);
             Output.TabIndex = 25;
             // 
+            // Show
+            // 
+            Show.Location = new Point(605, 64);
+            Show.Name = "Show";
+            Show.Size = new Size(78, 22);
+            Show.TabIndex = 51;
+            Show.Text = "Show";
+            Show.UseVisualStyleBackColor = true;
+            Show.Click += Show_Click;
+            // 
+            // textBox5
+            // 
+            textBox5.Enabled = false;
+            textBox5.Location = new Point(267, 34);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(123, 23);
+            textBox5.TabIndex = 52;
+            textBox5.Text = "Add a new van";
+            // 
             // Van_Screen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(769, 380);
+            Controls.Add(textBox5);
+            Controls.Add(Show);
             Controls.Add(Output);
             Controls.Add(Remove);
             Controls.Add(Select_Edit);
-            Controls.Add(button1);
+            Controls.Add(Add_Edit);
             Controls.Add(Whe_Edit);
             Controls.Add(Wei_Edit);
             Controls.Add(Hei_Edit);
@@ -277,7 +291,6 @@
             Controls.Add(textBox12);
             Controls.Add(Check_Button);
             Controls.Add(Check);
-            Controls.Add(Select_Add);
             Controls.Add(Add);
             Controls.Add(Whe_Add);
             Controls.Add(Wei_Add);
@@ -304,11 +317,10 @@
         private TextBox Hei_Add;
         private TextBox Reg_Add;
         private Button Add;
-        private ComboBox Select_Add;
         private ComboBox Check;
         private Button Check_Button;
         private ComboBox Select_Edit;
-        private Button button1;
+        private Button Add_Edit;
         private TextBox Whe_Edit;
         private TextBox Wei_Edit;
         private TextBox Hei_Edit;
@@ -319,5 +331,7 @@
         private TextBox textBox12;
         private Button Remove;
         private TextBox Output;
+        private Button Show;
+        private TextBox textBox5;
     }
 }

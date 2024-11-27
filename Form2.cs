@@ -119,6 +119,54 @@ namespace RentalReview_V2
                     ListOfCars.Remove(ListOfCars.ElementAt(0));
                     Output.Text = "Car removed from database";
                     break;
+                case "CarB":
+                    car = ListOfCars.ElementAt(1);
+                    ListOfCars.Remove(ListOfCars.ElementAt(1));
+                    Output.Text = "Car removed from database";
+                    break;
+                case "CarC":
+                    car = ListOfCars.ElementAt(2);
+                    ListOfCars.Remove(ListOfCars.ElementAt(2));
+                    Output.Text = "Car removed from database";
+                    break;
+            }
+        }
+
+        private void Add_Edit_Click(object sender, EventArgs e)
+        {
+            CarForm car = new CarForm();
+            switch (Select_Edit.SelectedItem)
+            {
+                case "CarA":
+                    car = ListOfCars.ElementAt(0);
+                    ListOfCars.Remove(ListOfCars.ElementAt(0));
+                    ListOfCars.Add(car);
+                    car.Registration = Reg_Edit.Text;
+                    car.Wheels = int.Parse(Whe_Edit.Text);
+                    car.Weight = int.Parse(Wei_Edit.Text);
+                    car.NumberOfPassengers = int.Parse(Pas_Edit.Text);
+                    Output.Text = "Vehicle edited in database.";
+                    break;
+                case "CarB":
+                    car = ListOfCars.ElementAt(1);
+                    ListOfCars.Remove(ListOfCars.ElementAt(1));
+                    ListOfCars.Add(car);
+                    car.Registration = Reg_Edit.Text;
+                    car.Wheels = int.Parse(Whe_Edit.Text);
+                    car.Weight = int.Parse(Wei_Edit.Text);
+                    car.NumberOfPassengers = int.Parse(Pas_Edit.Text);
+                    Output.Text = "Vehicle edited in database.";
+                    break;
+                case "CarC":
+                    car = ListOfCars.ElementAt(2);
+                    ListOfCars.Remove(ListOfCars.ElementAt(2));
+                    ListOfCars.Add(car);
+                    car.Registration = Reg_Edit.Text;
+                    car.Wheels = int.Parse(Whe_Edit.Text);
+                    car.Weight = int.Parse(Wei_Edit.Text);
+                    car.NumberOfPassengers = int.Parse(Pas_Edit.Text);
+                    Output.Text = "Vehicle edited in database.";
+                    break;
             }
         }
     }

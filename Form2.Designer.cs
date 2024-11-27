@@ -73,6 +73,7 @@
             Add_Edit.TabIndex = 46;
             Add_Edit.Text = "Edit in database";
             Add_Edit.UseVisualStyleBackColor = true;
+            Add_Edit.Click += Add_Edit_Click;
             // 
             // Whe_Edit
             // 
